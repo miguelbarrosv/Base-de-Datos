@@ -74,13 +74,13 @@ WHERE UPPER(table_name) IN ('DEPART','EMPLE');
 SELECT *
 FROM EMPLE;
 
-SELCT *
+SELECT *
 FROM DEPART;
 
 --5:
 SELECT salario,apellido,dept_no
 FROM EMPLE
-WHERE salario>200000 dept_no=20 or dept_no=10;
+WHERE salario>200000 and dept_no=20 or dept_no=10;
 
 SELECT apellido,salario
 FROM  EMPLE
