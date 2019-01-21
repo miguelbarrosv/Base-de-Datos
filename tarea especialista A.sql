@@ -57,12 +57,12 @@ SELECT table_name
 FROM user_tables
 Where UPPER(table_name) in('DEPART','EMPLE');
 
---Oomprobarcolumnas de cada tabla
+--Comprobarcolumnas de cada tabla
 DESC emple
 DESC depart
 
 --Comprobar las restricciones y columnas
-SELECT constraint_name,table_name,columna_type
+SELECT constraint_name,table_name,constraint_type
 FROM USER_CONSTRAINTS 
 WHERE UPPER(table_name) IN ('DEPART','EMPLE');
 
