@@ -57,12 +57,12 @@ SELECT table_name
 FROM user_tables
 Where UPPER(table_name) in('DEPART','EMPLE');
 
---Oomprobarcolumnas de cada tabla
+--Comprobarcolumnas de cada tabla
 DESC emple
 DESC depart
 
 --Comprobar las restricciones y columnas
-SELECT constraint_name,table_name,columna_type
+SELECT constraint_name,table_name,constraint_type
 FROM USER_CONSTRAINTS 
 WHERE UPPER(table_name) IN ('DEPART','EMPLE');
 
@@ -74,13 +74,13 @@ WHERE UPPER(table_name) IN ('DEPART','EMPLE');
 SELECT *
 FROM EMPLE;
 
-SELCT *
+SELECT *
 FROM DEPART;
 
 --5:
 SELECT salario,apellido,dept_no
 FROM EMPLE
-WHERE salario>200000 dept_no=20 or dept_no=10;
+WHERE salario>200000 and dept_no=20 or dept_no=10;
 
 SELECT apellido,salario
 FROM  EMPLE
